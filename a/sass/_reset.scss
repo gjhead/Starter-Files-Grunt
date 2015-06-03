@@ -1,0 +1,88 @@
+/*-------------------------------------------
+   	Global Starter
+-------------------------------------------*/
+
+html, body, div, span, object, iframe, 
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, menu, nav, section, main, summary,
+time, mark, audio, video { 
+	margin: 0; 
+	padding: 0; 
+	border: 0; 
+	outline: 0; 
+	font-size: 100%; 
+	vertical-align: baseline; 
+	background: transparent;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary, audio, canvas, progress, video {
+    display: block;
+}
+
+html { 
+	-webkit-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%; 
+	-webkit-font-smoothing: antialiased; 
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/* Nice Subs & Sups */
+sub, sup { 
+	font-size: 75%; 
+	line-height: 0; 
+	position: relative; 
+	vertical-align: baseline; 
+}
+
+	sup {top: -0.5em;}
+	sub {bottom: -0.25em;}
+
+
+img {
+	border: 0; 
+	-ms-interpolation-mode: bicubic; 
+	vertical-align: middle;
+	display: block;
+	max-width: 100%;
+	height: auto;
+
+	a & {border: none;}
+}
+
+pre {
+    overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+	td,
+	th {
+	    padding: 0;
+	    vertical-align: top;
+	}
+
+::-moz-selection { background: #d7d7d7; color: #000; text-shadow: none; }
+::selection { background: #d7d7d7; color: #000; text-shadow: none; }

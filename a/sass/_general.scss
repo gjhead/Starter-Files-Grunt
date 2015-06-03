@@ -1,0 +1,141 @@
+/* Color Variables */
+
+$black: #252525;
+$aqua: #00abc5;
+$aqua-hover: red;
+
+$text-body: red;
+$text-link: $aqua;
+$text-link-hover: $aqua-hover;
+
+// Breakpoint Variables
+
+// Going Up -->
+// Min Widths
+$large: 681px;
+$mid: 549px;  // Made for fine tuning some mobile styles a bit.
+
+
+// Going Down <--
+$max-small: 680px;
+
+
+/* Font Sizes */
+
+$base: 16px;
+$base-sm: $base/2;
+$base-med: $base * 2;
+$base-lg: $base * 3;
+$base-xl: $base * 4;
+$base-xxl: $base * 5;
+
+$base-font-size: 16px;
+$base-font-rem: 1.6rem;
+$base-line-height: $base-med;
+
+
+/* Base Fonts */
+$headline-text: Verdana, sans-serif;
+$body-text: Georgia, serif;
+
+
+
+/* Site Specific General Styles */
+
+body { 
+	color: $text-body;
+	font-family: $body-text;	
+	line-height: $base-line-height;
+}
+
+p, ul, dl, ol { 
+	line-height: $base-line-height;
+	margin-bottom: $base;
+}
+
+li {
+	margin-bottom: $base;
+}
+
+h2 {
+  font-size: 32px;
+  color: $black;
+  font-family: $headline-text;
+  font-weight: normal;
+  margin-bottom: .75em;
+  line-height: 1.1em;   
+}
+
+h3 {
+  font-size: 28px;
+  color: $black;
+  font-family: $headline-text;
+  font-weight: normal;
+  margin: 1em 0 .75em;
+  line-height: 1.1em;     
+}
+
+h4 {
+  font-size: 24px;
+  color: $black;
+  font-family: $headline-text;
+  font-weight: normal;
+  margin: 1em 0 .75em;
+  line-height: 1.1em;     
+}
+
+h5 {
+  font-size: 20px;
+  color: $black;
+  font-family: $headline-text;
+  font-weight: normal;
+  margin: 1em 0 .75em;
+  line-height: 1.1em;     
+}
+
+ul, ol {    
+  
+  li {
+  }
+  
+}
+
+blockquote {
+  
+  @media screen and (max-width: $mid) {
+     
+  } 
+  
+}
+
+img[align="right"],
+img.right {    
+  float: right;
+  margin: 10px 0 20px 30px;  
+  
+  @media screen and (max-width: $mid) {
+    float: none;
+    margin: 20px auto;      
+  } 
+}
+
+img[align="left"],
+img.left {    
+  float: left;
+  margin: 10px 30px 20px 0;  
+  
+  @media screen and (max-width: $mid) {
+    float: none;
+    margin: 20px auto;      
+  }   
+}
+
+
+a {
+  color: $text-link;
+  //@include transition;
+  
+  &:hover, &:focus { 
+  	color: $text-link-hover;
+  }
+}
