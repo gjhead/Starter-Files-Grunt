@@ -1,141 +1,203 @@
 /* Color Variables */
 
-$black: #252525;
-$aqua: #00abc5;
-$aqua-hover: red;
+$black: 			rgb(0,0,0);
+$white: 			rgb(255,255,255);
+$off-white:			rgba(255,255,255,.5);
+$gray:				grey;
 
-$text-body: red;
-$text-link: $aqua;
-$text-link-hover: $aqua-hover;
+// GENERAL Breakpoint Variables
 
-// Breakpoint Variables
+// IN general, these are the main breakpoints. But, there are a few custom ones throughout when needed.
 
 // Going Up -->
 // Min Widths
-$large: 681px;
-$mid: 549px;  // Made for fine tuning some mobile styles a bit.
 
+$medium:  	680px; // min-width
+$large:   	900px; // min-width
 
-// Going Down <--
-$max-small: 680px;
-
-
+  
 /* Font Sizes */
+// Not really using these at all.
 
 $base: 16px;
-$base-sm: $base/2;
-$base-med: $base * 2;
-$base-lg: $base * 3;
-$base-xl: $base * 4;
-$base-xxl: $base * 5;
-
 $base-font-size: 16px;
-$base-font-rem: 1.6rem;
-$base-line-height: $base-med;
 
-
-/* Base Fonts */
-$headline-text: Verdana, sans-serif;
-$body-text: Georgia, serif;
-
+/* font familes */
+$courier: "Courier New", Courier, monospace;
+$proxima: "proxima-nova",sans-serif;
 
 
 /* Site Specific General Styles */
 
-body { 
-	color: $text-body;
-	font-family: $body-text;	
-	line-height: $base-line-height;
+html {
+  box-sizing: border-box;
 }
 
-p, ul, dl, ol { 
-	line-height: $base-line-height;
-	margin-bottom: $base;
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+body { 
+	background: #000000;
+	color: #ffffff;
+	font-family: $courier;
+	font-size: $base;
+}
+
+b, strong{
+}
+
+i, em {
+	font-style: italic;
+}
+
+p {
+	line-height: 1.2em;
+	margin: 0 0 1em;
+}
+
+ul, dl, ol { 
+	margin: 0 0 1em;
+}
+
+ul ul,
+ol ol {
+	margin: 1em 0 1.5em;
+	font-size: .9em;
 }
 
 li {
-	margin-bottom: $base;
+	line-height: 1.2em;
+	margin: 0 0 .75em;
 }
 
-h2 {
-  font-size: 32px;
-  color: $black;
-  font-family: $headline-text;
-  font-weight: normal;
-  margin-bottom: .75em;
-  line-height: 1.1em;   
-}
-
-h3 {
-  font-size: 28px;
-  color: $black;
-  font-family: $headline-text;
-  font-weight: normal;
-  margin: 1em 0 .75em;
-  line-height: 1.1em;     
-}
-
-h4 {
-  font-size: 24px;
-  color: $black;
-  font-family: $headline-text;
-  font-weight: normal;
-  margin: 1em 0 .75em;
-  line-height: 1.1em;     
-}
-
-h5 {
-  font-size: 20px;
-  color: $black;
-  font-family: $headline-text;
-  font-weight: normal;
-  margin: 1em 0 .75em;
-  line-height: 1.1em;     
-}
-
-ul, ol {    
-  
-  li {
-  }
-  
-}
-
-blockquote {
-  
-  @media screen and (max-width: $mid) {
-     
-  } 
-  
-}
-
-img[align="right"],
-img.right {    
-  float: right;
-  margin: 10px 0 20px 30px;  
-  
-  @media screen and (max-width: $mid) {
-    float: none;
-    margin: 20px auto;      
-  } 
-}
-
-img[align="left"],
-img.left {    
-  float: left;
-  margin: 10px 30px 20px 0;  
-  
-  @media screen and (max-width: $mid) {
-    float: none;
-    margin: 20px auto;      
-  }   
+dl {
+	
+	dt {
+		margin: 1.2em 0 1em;
+		
+		&:first-child {
+			margin-top:0;
+		}	
+	}
+	
+	dd {
+		line-height: 1.2em;
+	}
 }
 
 
 a {
-  color: $text-link;
-  //@include transition;
+	color: $white;
+	border-bottom: 1px solid $white;
+	text-decoration: none;
+	@extend %transition;
+	
+	&:hover,
+	&:active,
+	&:focus {
+		border-bottom: 1px solid transparent;
+	}
+}
+
+h1,
+h1.af {
+	@extend %fontLegibility;
+	font-family: "proxima-nova",sans-serif;
+	font-size: 72px;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: .85em;
+	margin:0;
+	padding:0;
+	
+	@media screen and (min-width: 550px) { 
+		font-size: 102px;
+	}
+}
+
+h2 {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 27px;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin-top: .5em;
+}
+
+h3 {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 21px;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin-top:0;
+}
+
+h4 { 
+	font-family: "Courier New", Courier, monospace;
+	font-size: 18px;
+	font-weight: normal;
+	text-transform: uppercase; 
+	margin-top:0;
+}
+h5 { 
+	
+	font-family: "Courier New", Courier, monospace;
+	font-size: 15px;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin-top:0;
+}
+
+h6 { 	
+	font-family: "Courier New", Courier, monospace;
+	font-size: 13px;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin-top:0;
+}
+
+
+blockquote {
+	
+	border-left: 5px solid $white;
+	padding: 10px 20px 5px;
+	
   
-  &:hover, &:focus { 
-  	color: $text-link-hover;
-  }
+}
+
+
+table {
+	border-collapse: collapse;
+    border-spacing: 0;
+    
+    
+    th {
+	    padding: 5px 10px;
+	    vertical-align: top;
+	    text-align: center;
+	    font-weight: normal;
+	    font-family: $proxima;
+	    text-transform: uppercase;
+	    @extend %fontLegibility;
+	    font-size: 13px;
+	    
+    }
+    
+    td {
+	    padding: 5px 10px;
+	    font-size: 13px;
+	    text-align: center;	    
+    }
+	
+	
+}
+
+
+
+
+
+// Some Pattern Lab Stuff
+.font-secondary {
+	font-family: $proxima;
 }

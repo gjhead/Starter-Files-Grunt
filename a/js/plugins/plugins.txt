@@ -1,1 +1,1 @@
-Any associated plug-in scripts.
+Any associated plug-in scripts get appended to our main js file.

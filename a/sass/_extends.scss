@@ -1,18 +1,17 @@
-/* Additional Styles & Helpers Last */
-
-/* clears */
-.clear {clear: both;}
-
 /* Contain floats: h5bp.com/q */
 .group:before, .group:after {content: ""; display: table;}
 .group:after {clear: both;}
-.group {*zoom: 1;} /* For IE 6/7 (trigger hasLayout) can remove this soon */
 
-/* Hide for both screenreaders and browsers */
-.hidden {display: none; visibility: hidden;} 
+
+
+%fontLegibility {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 
 /* Hide only visually, but have it available for screenreaders: */
-.vh { 
+%vh { 
 	border: 0; 
 	clip: rect(0 0 0 0); 
 	height: 1px; 
@@ -32,14 +31,13 @@
 	}
 }
 
-
 /* Hide visually and from screenreaders, but maintain layout */
-.invisible { visibility: hidden; }
-
-#logo-print {display: none;}
+%invisible { 
+	visibility: hidden; 
+}
 
 /* for image replacement */
-.ir { 
+%ir { 
 	display: block; 
 	border: 0; 
 	text-indent: -123456em; 
@@ -49,4 +47,25 @@
 	text-align: left; 
 	direction: ltr; 
 	*line-height: 0; 
+}
+
+/* Hide for both screenreaders and browsers */
+%hidden {
+	display: none; 
+	visibility: hidden;
+} 
+
+
+
+
+
+
+%fade {
+	transition: opacity 0.5s ease-out;
+}
+
+
+
+%transition {
+	transition: all 0.5s ease-in-out;
 }

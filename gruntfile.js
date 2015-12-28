@@ -7,8 +7,8 @@ module.exports = function(grunt) {
     codekit: {
       
       dist: {
-        src : 'templates/**/*.kit',
-        dest : ''
+        src : 'a/kit/**/*.kit',
+        dest : 'templates'
       }
       
     },    
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
       options: {
         map: true,
         processors: [
-          require('autoprefixer-core')({browsers: 'last 2 versions'})        
+          require('autoprefixer')({browsers: 'last 2 versions'})        
         ]
       },
       
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
         
         files: {
           'js/jquery-min.js' : 'a/js/jquery/jquery-2.1.4.js',
-          'js/script-min.js' : ['a/js/plugins/*.js', 'a/js/script.js']          
+          'js/script-min.js' : ['a/js/script.js', 'a/js/plugins/*.js']          
         } 
         
       }
@@ -64,8 +64,8 @@ module.exports = function(grunt) {
       },
       
       kit: {
-        files: ['templates/**/*.kit'],
-        tasks: ['codekit']
+        files: ['a/kit/**/*.kit'],
+	    tasks: ['codekit']
       },
       
       sass: {

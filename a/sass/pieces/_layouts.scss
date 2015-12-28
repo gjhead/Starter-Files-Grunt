@@ -1,23 +1,34 @@
-// PAGE LAYOUTS
-
-
-/*  Page Containers */
-
 .wrap {
 	margin: 0 auto;
-	padding: 25px;
-	max-width: 1240px;
-	box-sizing: border-box;
+	width: 100%;
+	max-width: 1200px;
 }
 
-/* Content & Nav Layout */
 
-// BODY LAYOUTS
-body { 
-  	
-	@media screen and (min-width: $large) {
-   
-  }
-  	
+.oneUp {	
+	.block {
+		width: 100%;
+	}
 }
 
+.twoUp {	
+	.block {
+		width: 50%;
+		float: left;
+	}	
+}
+
+.threeUp {	
+	.block {
+		width: 33%;
+		float: left;
+	}	
+}
+
+
+.fourUp {	
+	.block {
+		width: 25%;
+		float: left;
+	}	
+}

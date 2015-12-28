@@ -1,0 +1,148 @@
+form {
+	
+	ul {
+		list-style-type: none;
+		padding-left:0;
+		margin-left:0;
+		
+		li {
+			padding-left:0;
+			margin-left:0;
+		}
+	}
+}
+
+%clearformdefault {
+	opacity: 1;
+	border-radius: 0;	
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	outline: none;
+	border:none;
+}
+
+
+fieldset {
+	display: block;	
+	
+	label {
+		display: block;
+		font-size: 15px;
+		margin-bottom: 5px;
+	}	
+}
+
+.input-text {
+	@extend %clearformdefault;
+	
+	font-size: 14px;
+	padding: 11px 5px 10px;
+	margin: 0 0 10px;
+	font-family: $courier;
+	
+	&:focus {
+		
+	}
+	
+	&.error {
+		border: 1px solid red;
+	}
+}
+
+textarea {
+	@extend %clearformdefault;
+	
+	font-size: 14px;
+	padding: 10px;
+	margin: 0 0 10px;
+	font-family: $courier;	
+}
+
+abbr[title="Required"] {
+	color: red;
+}
+
+select {
+	@extend %clearformdefault;
+	
+	font-size: 14px;
+	padding: 0 20px 0 5px;
+	height: 30px;
+	margin: 0 0 10px;
+	font-family: $courier;
+	
+	background: $white url(../../../assets/chevron-down.svg) right 5px center no-repeat;
+	background-size: 20px;
+}
+
+
+// Buttons
+button, .button {
+	@extend %clearformdefault;
+	@extend %fontLegibility;
+	
+	font-size: 14px;
+	font-family: $proxima;
+	color: $black;
+	background: $white;
+	text-decoration: none;
+	text-transform: uppercase;
+	display: inline-block;
+	cursor: pointer; 
+	margin:0;
+	padding: 10px 20px;
+	@extend %transition;
+	
+	&:hover,
+	&:focus {
+		background: grey;
+		color: #ffffff;
+	}	
+}
+
+
+.buttonB {
+	@extend %clearformdefault;
+	@extend %fontLegibility;
+	
+	font-size: 12px;
+	font-family: $proxima;
+	color: $black;
+	background: $white;
+	text-decoration: none;
+	text-transform: uppercase;
+	display: inline-block;
+	cursor: pointer; 
+	margin:0;
+	padding: 5px 10px;
+	@extend %transition;
+	
+	&:hover,
+	&:focus {
+		background: grey;
+		color: #ffffff;
+	}
+}
+
+
+
+// Newsletter Subscription Form
+.subForm {
+	
+	form {
+		display: block;
+		width: 300px;
+		margin: 35px auto;  
+	}
+	
+	input[type="email"] {
+		width: 150px;
+	}
+	
+	label[for="fieldEmail"] {
+		@extend %vh;
+	}
+}
