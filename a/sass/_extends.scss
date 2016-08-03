@@ -2,13 +2,14 @@
 .group:before, .group:after {content: ""; display: table;}
 .group:after {clear: both;}
 
-
+%clear {
+	clear:both;
+}
 
 %fontLegibility {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
 
 /* Hide only visually, but have it available for screenreaders: */
 %vh { 
@@ -21,7 +22,8 @@
 	position: absolute; 
 	width: 1px;
 	
-	&.focusable:active,  &.focusable:focus {
+	&.focusable:active,  
+	&.focusable:focus {
 		clip: auto; 
 		height: auto; 
 		margin: 0; 
@@ -34,6 +36,11 @@
 /* Hide visually and from screenreaders, but maintain layout */
 %invisible { 
 	visibility: hidden; 
+}
+
+%hideall {
+	visibility: hidden;
+	display:none;
 }
 
 /* for image replacement */
@@ -53,19 +60,53 @@
 %hidden {
 	display: none; 
 	visibility: hidden;
-} 
+}
 
 
+/* Zero out list styles */
+%zeroList {
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}
+
+
+/* Stand for No Text */
+.nt {
+	display: block; 
+	border: 0; 
+	text-indent: -123456em; 
+	overflow: hidden; 
+	text-align: left; 
+	direction: ltr; 
+	*line-height: 0; 
+}
+
+.nobr {
+	white-space: nowrap;
+}
+
+// Hide things on mobile
+.hideSmall {
+	display: none;
+	
+	@media screen and (min-width: $medium) {
+
+		display: inherit;
+	}
+}
+
+p.center {
+	text-align: center
+}
 
 
 
 
 %fade {
-	transition: opacity 0.5s ease-out;
+	transition: opacity 0.25s ease-out;
 }
 
-
-
 %transition {
-	transition: all 0.5s ease-in-out;
+	transition: all 0.25s ease-in-out;
 }

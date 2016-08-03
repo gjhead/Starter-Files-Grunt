@@ -1,9 +1,30 @@
-/* Color Variables */
+ /* Color Variables */
 
-$black: 			rgb(0,0,0);
-$white: 			rgb(255,255,255);
-$off-white:			rgba(255,255,255,.5);
-$gray:				grey;
+$white: 			#ffffff;
+
+$black: 			#1a1a1a;
+$black-alt: 		#333333;
+$black-div:			#151515;
+
+$blue_sky:			#16b0ff;
+$blue_fb:			#7e8ebc;
+
+$red:				#a81a1a;
+$maroon:			#990000;
+
+$gray:				#e5e5e5;
+$gray-txt:			#767676;
+$gray-lte:			#e8e8e8;
+$gray-lte-txt:		rgba(114,114,114,.7);
+$gray-drk-txt:		#8d8d8d;
+$gray-bg:			#f2f2f2;
+$gray-div:			#c2c2c2;
+
+$grey-alt-lte:		#b2b2b2;
+
+$darkbg:			#2f2e2e;
+
+
 
 // GENERAL Breakpoint Variables
 
@@ -12,40 +33,62 @@ $gray:				grey;
 // Going Up -->
 // Min Widths
 
-$medium:  	680px; // min-width
-$large:   	900px; // min-width
+$medium:  	640px; // min-width
+$large:   	1200px; // min-width this is our main breakpont when large kicks in, but we need to account for an extra 140 pixels on left/right for the controls
 
-  
+$header:	1340px; // header trigger bring back those extra 140 pixels.
+
+
+$headFull: 	900px; // min-width
+
+
 /* Font Sizes */
 // Not really using these at all.
 
 $base: 16px;
+$base-sm: $base/2;
+$base-med: $base * 2;
+$base-lg: $base * 3;
+$base-xl: $base * 4;
+$base-xxl: $base * 5;
+
 $base-font-size: 16px;
+$base-font-rem: 1.6rem;
+$base-line-height: $base-med;
+
 
 /* font familes */
-$courier: "Courier New", Courier, monospace;
-$proxima: "proxima-nova",sans-serif;
+$quadrat:	"FFQuadraatWeb", Times, "Times New Roman", serif;
+$graphik:	"GraphikWeb", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$compass:	"CompassStA", 'Courier New', Courier, monospace;
 
+
+$adelle: "adelle", Georgia, Arial, sans-serif;
+$tabletgothic: "tablet-gothic", Arial, sans-serif;
+$tabletgothiccomp: "tablet-gothic-compressed", Arial, sans-serif; 
+
+
+/* Base Fonts */
+$headline-text: Verdana, sans-serif;
 
 /* Site Specific General Styles */
 
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 
 body { 
-	background: #000000;
-	color: #ffffff;
-	font-family: $courier;
-	font-size: $base;
+   	color: #595959;
+	font-family: $quadrat;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+	font-weight: 400;
+	font-style: normal;
+	
+	@media screen and (min-width: $large) {
+		font-size: 22px;
+	} 	
 }
 
 b, strong{
+	font-weight: 700;
 }
 
 i, em {
@@ -53,151 +96,294 @@ i, em {
 }
 
 p {
-	line-height: 1.2em;
-	margin: 0 0 1em;
+	line-height: 1.5em;
+	margin-bottom: 1em;
+	
+	@media screen and (min-width: $medium) {
+
+	}
 }
 
-ul, dl, ol { 
-	margin: 0 0 1em;
+ul {    
+  line-height: 1.7em;
+  margin-left: 1em;
+  
+  li {
+	 margin:auto;
+	 margin-bottom: 1em;
+  }    
 }
 
-ul ul,
-ol ol {
-	margin: 1em 0 1.5em;
-	font-size: .9em;
-}
 
-li {
-	line-height: 1.2em;
-	margin: 0 0 .75em;
+ol {    
+  line-height: 1.7em;
+  margin-left: 1em;
+  
+  li {
+	 margin-bottom: 1em; 
+  }    
 }
 
 dl {
-	
-	dt {
-		margin: 1.2em 0 1em;
-		
-		&:first-child {
-			margin-top:0;
-		}	
-	}
-	
-	dd {
-		line-height: 1.2em;
-	}
+	line-height: 1.7em;
 }
 
-
 a {
-	color: $white;
-	border-bottom: 1px solid $white;
+	color: $black;
 	text-decoration: none;
 	@extend %transition;
 	
 	&:hover,
-	&:active,
 	&:focus {
-		border-bottom: 1px solid transparent;
+		
 	}
 }
 
-h1,
-h1.af {
-	@extend %fontLegibility;
-	font-family: "proxima-nova",sans-serif;
-	font-size: 72px;
-	text-transform: uppercase;
-	text-align: center;
-	line-height: .85em;
-	margin:0;
-	padding:0;
-	
-	@media screen and (min-width: 550px) { 
-		font-size: 102px;
+
+h1, .heading1 {
+  font-size: 18px;
+  color: $black;
+  font-family: $graphik;
+  font-weight: 700;
+  line-height: 1em;
+  margin-bottom: 1em;
+  letter-spacing: -1px;
+  
+	@media screen and (min-width: $medium) {
+		//font-size: 35px;
 	}
-}
-
-h2 {
-	font-family: "Courier New", Courier, monospace;
-	font-size: 27px;
-	font-weight: normal;
-	text-transform: uppercase;
-	margin-top: .5em;
-}
-
-h3 {
-	font-family: "Courier New", Courier, monospace;
-	font-size: 21px;
-	font-weight: normal;
-	text-transform: uppercase;
-	margin-top:0;
-}
-
-h4 { 
-	font-family: "Courier New", Courier, monospace;
-	font-size: 18px;
-	font-weight: normal;
-	text-transform: uppercase; 
-	margin-top:0;
-}
-h5 { 
 	
-	font-family: "Courier New", Courier, monospace;
-	font-size: 15px;
-	font-weight: normal;
-	text-transform: uppercase;
-	margin-top:0;
+	@media screen and (min-width: $large) {
+		font-size: 70px;
+		letter-spacing: -3px;
+	}  
 }
 
-h6 { 	
-	font-family: "Courier New", Courier, monospace;
-	font-size: 13px;
-	font-weight: normal;
-	text-transform: uppercase;
-	margin-top:0;
+h2, .heading2 {
+  font-size: 13px;
+  color: $black;
+  font-family: $graphik;
+  font-weight: 700;
+  line-height: 1em;
+  margin-bottom: 1em;
+  letter-spacing: -1px;
+  
+	@media screen and (min-width: $medium) {
+		//font-size: 25px;
+	}
+	
+	@media screen and (min-width: $large) {
+		font-size: 50px;
+		letter-spacing: -1px;
+	}  
+}
+
+
+
+h3, .heading3 {
+  font-size: 13px;
+  color: $black;
+  font-family: $graphik;
+  font-weight: 700;
+  line-height: 1em;
+  margin-bottom: 1em;
+  letter-spacing: -1px;
+  
+	@media screen and (min-width: $medium) {
+		//font-size: 25px;
+	}
+	
+	@media screen and (min-width: $large) {
+		font-size: 50px;
+		letter-spacing: -3px;
+	}  
+}
+
+h4, .heading4 {
+  font-size: 25px;
+  color: $black;
+  font-family: $graphik;
+  font-weight: 700;
+  line-height: 1em;
+  margin-bottom: 1em;
+  letter-spacing: -1px;
+  
+	@media screen and (min-width: $medium) {
+		//font-size: 25px;
+	}
+	
+	@media screen and (min-width: $large) {
+		font-size: 50px;
+		letter-spacing: -3px;
+	}  
+}
+
+h5, .heading5 {
+  font-size: 13px;
+  color: $black;
+  font-family: $graphik;
+  font-weight: 600;
+  margin: 1em 0 .75em; 
+  line-height: 1.1em;  
+  letter-spacing: -1px;
+  
+	@media screen and (min-width: $medium) {
+		//font-size: 20px;
+	}
+	
+	@media screen and (min-width: $large) {
+		font-size: 16px;
+	}    
+}
+
+h6, .heading6 {
+  font-size: 10px;
+  color: $gray-lte-txt;
+  font-family: $graphik;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 1em 0 2em; 
+  line-height: 1em; 
+  
+  	@media screen and (min-width: $medium) {
+		//font-size: 20px;
+	}
+	
+	@media screen and (min-width: $large) {
+		font-size: 12px;
+	}   
 }
 
 
 blockquote {
 	
-	border-left: 5px solid $white;
-	padding: 10px 20px 5px;
-	
-  
 }
+
+
+img[align="right"],
+img.right {    
+  float: right;
+  margin: 10px 0 20px 30px;  
+  
+  @media screen and (max-width: $medium) {
+    float: none;
+    margin: 20px auto;      
+  } 
+}
+
+img[align="left"],  
+img.left {    
+  float: left;
+  margin: 10px 30px 20px 0;  
+  
+  @media screen and (max-width: $medium) {
+    float: none;
+    margin: 20px auto;      
+  }   
+}
+
+
+/// Hiding Stuff at Breakpoints
+
+.hide-small {	
+	@media screen and (max-width: $medium) {
+	    display: none;     
+  	}	
+}
+
+.hide-medium {	
+	@media screen and (min-width: $medium) and (max-width: $large) {
+	    display: none;     
+  	}
+}
+
+.hide-large {	
+	@media screen and (min-width: $large) {
+	    display: none;     
+  	}	
+}
+
+// Line Break
+
+.break-small {	
+	@media screen and (max-width: $medium) {
+	    display: block;     
+  	}	
+}
+
+.break-medium {	
+	@media screen and (max-width: $large) {
+	    display: block;       
+  	}
+}
+
 
 
 table {
+	width: 100%;
 	border-collapse: collapse;
-    border-spacing: 0;
-    
-    
-    th {
-	    padding: 5px 10px;
-	    vertical-align: top;
-	    text-align: center;
-	    font-weight: normal;
-	    font-family: $proxima;
-	    text-transform: uppercase;
-	    @extend %fontLegibility;
-	    font-size: 13px;
-	    
-    }
-    
-    td {
-	    padding: 5px 10px;
-	    font-size: 13px;
-	    text-align: center;	    
-    }
+	border-spacing: 0;
+	padding:0;
+	margin:0;
 	
-	
+	th {
+		text-align: left;
+	}
 }
 
 
 
+svg {	
+	path {		
+		@extend %transition;
+	}
+}
 
 
-// Some Pattern Lab Stuff
-.font-secondary {
-	font-family: $proxima;
+// Opacity Controls
+
+.op0 {
+	opacity: 1;
+}
+
+.op1 {
+	opacity: .1;
+}
+
+.op2 {
+	opacity: .2;
+}
+
+.op3 {
+	opacity: .3;
+}
+
+.op4 {
+	opacity: .4;
+}
+
+.op5 {
+	opacity: .5;
+}
+
+.op6 {
+	opacity: .6;
+}
+
+.op7 {
+	opacity: .7;
+}
+
+.op8 {
+	opacity: .8;
+}
+
+.op9 {
+	opacity: .9;
+}
+
+.op10 {
+	opacity: 0;
 }

@@ -14,8 +14,8 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure, 
 footer, header, menu, nav, section, main, summary,
 time, mark, audio, video { 
-	//margin: 0; 
-	//padding: 0; 
+	margin: 0; 
+	padding: 0; 
 	border: 0; 
 	outline: 0; 
 	font-size: 100%; 
@@ -28,9 +28,33 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
 }
 
 html { 
-	//-webkit-text-size-adjust: 100%; 
-	//-ms-text-size-adjust: 100%; 
+	-webkit-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%; 
+	-webkit-font-smoothing: antialiased;
 }
+
+body {
+	-moz-font-feature-settings: "liga", "kern";
+	-moz-font-feature-settings: "liga=1, kern=1";
+	-ms-font-feature-settings: "liga", "kern";
+	-o-font-feature-settings: "liga", "kern";
+	-webkit-font-feature-settings: "liga", "kern";
+	font-feature-settings: "liga", "kern";
+}
+
+
+// Let's set some box-sizing right off the bat, eh?
+/* apply a natural box layout model to all elements, but allowing components to change */
+/* http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+
+html {
+  box-sizing: border-box;  
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 
 a:active,
 a:hover {
@@ -57,7 +81,9 @@ img {
 	max-width: 100%;
 	height: auto;
 
-	a & {border: none;}
+	a & {
+		border: none;
+	}
 }
 
 pre {
@@ -71,7 +97,6 @@ samp {
     font-family: monospace, monospace;
     font-size: 1em;
 }
-
 
 
 ::-moz-selection { background: #d7d7d7; color: #000; text-shadow: none; }
