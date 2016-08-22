@@ -7,8 +7,8 @@ module.exports = function(grunt) {
     codekit: {
       
       dist: {
-        src : 'a/kit/**/*.kit',
-        dest : 'templates'
+        src : '/a/kit/**/*.kit',
+        dest : '/'
       }
       
     },    
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
           style: 'nested' // compact, compressed, nested or expanded
         },
         files: {
-          'a/pre-css/screen-pre.css' : 'a/sass/screen.scss'
+          '/a/pre-css/screen-pre.css' : '/a/sass/screen.scss'
         }
       }
                   
@@ -35,13 +35,13 @@ module.exports = function(grunt) {
       },
       
       dist: {
-        src: 'a/pre-css/screen-pre.css',
-        dest: 'css/screen.css'
+        src: '/a/pre-css/screen-pre.css',
+        dest: '/css/screen.css'
       }
     },
     
     jshint: {
-      beforeuglify: 'a/js/script.js'
+      beforeuglify: '/a/js/script.js'
     },
     
     uglify: {
@@ -49,8 +49,8 @@ module.exports = function(grunt) {
       dist: {
         
         files: {
-          'js/jquery-min.js' : 'a/js/jquery/jquery-2.1.4.js',
-          'js/script-min.js' : ['a/js/script.js', 'a/js/plugins/*.js']          
+          '/js/jquery-min.js' : '/a/js/jquery/jquery-2.1.4.js',
+          '/js/script-min.js' : ['/a/js/script.js', '/a/js/plugins/*.js']          
         } 
         
       }
@@ -64,27 +64,22 @@ module.exports = function(grunt) {
       },
       
       kit: {
-        files: ['a/kit/**/*.kit'],
+        files: ['/a/kit/**/*.kit'],
 	    tasks: ['codekit']
       },
       
       sass: {
-        files: ['a/sass/**/*.scss'],
-        tasks: ['sass']
+        files: ['/a/sass/**/*.scss'],
+        tasks: ['sass', 'postcss']
       },
       
-      postcss: {
-        files: ['a/pre-css/screen-pre.css'],
-        tasks: ['postcss']
-      },
-      
-      jstest: {
-        files: ['a/js/script.js'],
+     jstest: {
+        files: ['/a/js/script.js'],
         tasks: ['jshint']
       },
       
       jsmin: {
-        files: ['a/js/**/*.js'], // Watch for changes in JS files except for script.min.js to avoid reload loops
+        files: ['/a/js/**/*.js'], // Watch for changes in JS files except for script.min.js to avoid reload loops
         tasks: ['uglify']
       }
 		}
@@ -102,5 +97,8 @@ module.exports = function(grunt) {
   
   
   grunt.registerTask('default', ['codekit', 'sass', 'postcss', 'jshint', 'uglify', 'watch']);
+  
+  grunt.registerTask('css', ['sass', 'postcss']);
+  grunt.registerTask('js', ['jshint', 'uglify']);
   
 };
