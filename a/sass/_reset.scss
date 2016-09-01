@@ -98,6 +98,10 @@ samp {
     font-size: 1em;
 }
 
+button {
+	cursor: pointer;
+}
+
 
 ::-moz-selection { background: #d7d7d7; color: #000; text-shadow: none; }
 ::selection { background: #d7d7d7; color: #000; text-shadow: none; }
