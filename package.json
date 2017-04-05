@@ -4,10 +4,10 @@
   "devDependencies": {
     "autoprefixer-core": "^6.0.1",
     "grunt": "^1.0.1",
-    "grunt-codekit": "^1.0.0",
-    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-codekit": "^1.1.0",
+    "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-uglify": "^2.3.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-postcss": "^0.8.0"
   }
