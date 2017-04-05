@@ -49,7 +49,7 @@ module.exports = function(grunt) {
       dist: {
         
         files: {
-          'js/jquery-min.js' : 'a/js/jquery/jquery-2.1.4.js',
+          'js/jquery-min.js' : 'a/js/jquery/jquery-3.2.0.js',
           'js/script-min.js' : ['a/js/script.js', '/a/js/plugins/*.js']          
         } 
         
