@@ -14,6 +14,12 @@ JS: jshint for linting and uglifier for minification.
 
 html: .kit for --very simple-- templating with little to no overhead.  I know there are much better templating engines out there, but for me I specifically want some as simple as possible. the .kit templating is about as simple as using a server side include.  If I ever decide to use a more complex templating engine, I'll most likely fork these starter files for it.
 
+https://www.npmjs.com/package/grunt-codekit
+
+It's a nice simple engine that allows for includes and variables.
+
+
+
 Notes:
 
 I do not like automating image minification, feel it's better to do this individually for best results.  That's why you don't see anything in here to do that manually.
@@ -23,5 +29,5 @@ Requirements:
 Node/NPM
 Grunt (Install global)
 
-npm install and you are good to go.
+npm install and you are good to go
 
