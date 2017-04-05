@@ -24,6 +24,8 @@ Notes:
 
 I do not like automating image minification, feel it's better to do this individually for best results.  That's why you don't see anything in here to do that manually.
 
+postcss - only using this for autoprefixr right now, and prob can make more use of the other items - but just haven't looked into it anymore.  Like I said, these starter files do pretty much everything I need right now.
+
 Requirements:
 
 Node/NPM
