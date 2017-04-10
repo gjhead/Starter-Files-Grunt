@@ -45,5 +45,9 @@ REQUIREMENTS:
 Node/NPM
 Grunt (Install global)
 
+Make sure you have the grunt cli installed globally:
+
+sudo npm install -g grunt-cli
+
 npm install and you are good to go  (you will prob need to use sudo)
 

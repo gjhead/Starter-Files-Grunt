@@ -1,1 +1,0 @@
-function placeCheck(){$("html").hasClass("lt-ie10")&&$("input[placeholder]").each(function(){$(this).val($(this).attr("placeholder"))})}$(document).ready(function(){placeCheck()});
