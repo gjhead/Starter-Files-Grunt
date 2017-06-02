@@ -12,6 +12,7 @@
 }
 
 /* Hide only visually, but have it available for screenreaders: */
+/* Perhaps update based on this: https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe */
 %vh { 
 	border: 0; 
 	clip: rect(0 0 0 0); 
