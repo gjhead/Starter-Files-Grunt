@@ -20,6 +20,8 @@ https://www.npmjs.com/package/grunt-codekit
 
 It's a nice simple engine that allows for includes and variables.
 
+Here is everything you can do with kit:  https://codekitapp.com/help/kit/
+
 Grunt watch will keep this running and compiling based on the watched files.  ctrl-c to quit.
 
 Livereload is on - snag the livereload chrome plugin for easy working: 
