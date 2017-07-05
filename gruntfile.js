@@ -8,7 +8,7 @@ module.exports = function(grunt) {
       
       dist: {
         src : 'a/kit/**/*.kit',
-        dest : ''
+        dest : 'build'
       }
       
     },    
@@ -30,13 +30,15 @@ module.exports = function(grunt) {
       options: {
         map: true,
         processors: [
-          require('autoprefixer')({browsers: 'last 2 versions'})        
+          require('autoprefixer')({
+	          browsers: 'last 2 versions'
+	        })        
         ]
       },
       
       dist: {
         src: 'a/pre-css/screen-pre.css',
-        dest: 'css/screen.css'
+        dest: 'build/css/screen.css'
       }
     },
     
@@ -49,8 +51,8 @@ module.exports = function(grunt) {
       dist: {
         
         files: {
-          'js/jquery-min.js' : 'a/js/jquery/jquery-3.2.0.js',
-          'js/script-min.js' : ['a/js/script.js', '/a/js/plugins/*.js']          
+          'build/js/jquery-min.js' : 'a/js/jquery/jquery-3.2.0.js',
+          'build/js/script-min.js' : ['a/js/script.js', '/a/js/plugins/*.js']          
         } 
         
       }
@@ -82,7 +84,7 @@ module.exports = function(grunt) {
         files: ['a/js/**/*.js'], // Watch for changes in JS files except for script.min.js to avoid reload loops
         tasks: ['uglify']
       }
-		}
+	}
     
     
 
