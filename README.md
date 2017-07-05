@@ -1,4 +1,4 @@
-Starter Files / Basic  (Updated 4/5/2017)
+Starter Files / Basic  (Updated 7/5/2017)
 
 These (along with many of my other github starter files) are put here just for my own memory/usage.  These are not organized or optimized for public consumption - and are just a place for me to start.
 
@@ -12,7 +12,7 @@ CSS: Sass, Autoprefixr (via postcss) - My css is a bit messy here, and I find my
 
 JS: jshint for linting and uglifier for minification.  I like having a jslinter because I am just a sloppy javascripter.  (The linter is also cool to use if you have a team and want to force certain formatting.)
 
-html: .kit for --very simple-- templating with little to no overhead.  I know there are much better templating engines out there, but for me I specifically want some as simple as possible. the .kit templating is about as simple as using a server side include.  If I ever decide to use a more complex templating engine, I'll most likely fork these starter files for it.
+html: .kit for --very simple-- templating with little to no overhead.  I know there are much better templating engines out there, but for me I specifically want some as simple as possible. the .kit templating is about as simple as using a server side include.  If I ever decide to use a more complex templating engine, I'll most likely fork these starter files for it.  See examples of how to make includes and pass variables in the a/kit directory.
 
 https://www.npmjs.com/package/grunt-codekit
 
