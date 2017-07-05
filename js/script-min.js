@@ -1,0 +1,1 @@
+function example(){}$(document).ready(function(){example()});

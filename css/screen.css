@@ -1,0 +1,352 @@
+/* Import Base Styles */
+/*-------------------------------------------
+   	Global Starter
+-------------------------------------------*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, menu, nav, section, main, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary, audio, canvas, progress, video {
+  display: block; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  -ms-font-feature-settings: "liga", "kern";
+  -o-font-feature-settings: "liga", "kern";
+  font-feature-settings: "liga", "kern"; }
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+/* http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Nice Subs & Sups */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+  display: block;
+  max-width: 100%;
+  height: auto; }
+  a img {
+    border: none; }
+
+pre {
+  overflow: auto; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+button {
+  cursor: pointer; }
+
+::-moz-selection {
+  background: #d7d7d7;
+  color: #000;
+  text-shadow: none; }
+
+::selection {
+  background: #d7d7d7;
+  color: #000;
+  text-shadow: none; }
+
+/* Color Variables */
+/* Font Sizes */
+/* font familes */
+/* Base Fonts */
+/* Site Specific General Styles */
+body {
+  color: #595959;
+  font-family: "FFQuadraatWeb", Times, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 400;
+  font-style: normal; }
+  @media screen and (min-width: 1200px) {
+    body {
+      font-size: 22px; } }
+
+b, strong {
+  font-weight: 700; }
+
+i, em {
+  font-style: italic; }
+
+p {
+  line-height: 1.5em;
+  margin-bottom: 1em; }
+
+ul {
+  line-height: 1.7em;
+  margin-left: 1em; }
+  ul li {
+    margin: auto;
+    margin-bottom: 1em; }
+
+ol {
+  line-height: 1.7em;
+  margin-left: 1em; }
+  ol li {
+    margin-bottom: 1em; }
+
+dl {
+  line-height: 1.7em; }
+
+a {
+  color: #1a1a1a;
+  text-decoration: none; }
+
+h1, .heading1 {
+  font-size: 18px;
+  color: #1a1a1a;
+  font-family: "GraphikWeb", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1em;
+  margin-bottom: 1em;
+  letter-spacing: -1px; }
+  @media screen and (min-width: 1200px) {
+    h1, .heading1 {
+      font-size: 70px;
+      letter-spacing: -3px; } }
+
+h2, .heading2 {
+  font-size: 13px;
+  color: #1a1a1a;
+  font-family: "GraphikWeb", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1em;
+  margin-bottom: 1em;
+  letter-spacing: -1px; }
+  @media screen and (min-width: 1200px) {
+    h2, .heading2 {
+      font-size: 50px;
+      letter-spacing: -1px; } }
+
+h3, .heading3 {
+  font-size: 13px;
+  color: #1a1a1a;
+  font-family: "GraphikWeb", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1em;
+  margin-bottom: 1em;
+  letter-spacing: -1px; }
+  @media screen and (min-width: 1200px) {
+    h3, .heading3 {
+      font-size: 50px;
+      letter-spacing: -3px; } }
+
+h4, .heading4 {
+  font-size: 25px;
+  color: #1a1a1a;
+  font-family: "GraphikWeb", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1em;
+  margin-bottom: 1em;
+  letter-spacing: -1px; }
+  @media screen and (min-width: 1200px) {
+    h4, .heading4 {
+      font-size: 50px;
+      letter-spacing: -3px; } }
+
+h5, .heading5 {
+  font-size: 13px;
+  color: #1a1a1a;
+  font-family: "GraphikWeb", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  margin: 1em 0 .75em;
+  line-height: 1.1em;
+  letter-spacing: -1px; }
+  @media screen and (min-width: 1200px) {
+    h5, .heading5 {
+      font-size: 16px; } }
+
+h6, .heading6 {
+  font-size: 10px;
+  color: rgba(114, 114, 114, 0.7);
+  font-family: "GraphikWeb", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 1em 0 2em;
+  line-height: 1em; }
+  @media screen and (min-width: 1200px) {
+    h6, .heading6 {
+      font-size: 12px; } }
+
+img[align="right"],
+img.right {
+  float: right;
+  margin: 10px 0 20px 30px; }
+  @media screen and (max-width: 640px) {
+    img[align="right"],
+    img.right {
+      float: none;
+      margin: 20px auto; } }
+
+img[align="left"],
+img.left {
+  float: left;
+  margin: 10px 30px 20px 0; }
+  @media screen and (max-width: 640px) {
+    img[align="left"],
+    img.left {
+      float: none;
+      margin: 20px auto; } }
+
+@media screen and (max-width: 640px) {
+  .hide-small {
+    display: none; } }
+
+@media screen and (min-width: 640px) and (max-width: 1200px) {
+  .hide-medium {
+    display: none; } }
+
+@media screen and (min-width: 1200px) {
+  .hide-large {
+    display: none; } }
+
+@media screen and (max-width: 640px) {
+  .break-small {
+    display: block; } }
+
+@media screen and (max-width: 1200px) {
+  .break-medium {
+    display: block; } }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  padding: 0;
+  margin: 0; }
+  table th {
+    text-align: left; }
+
+.op0 {
+  opacity: 1; }
+
+.op1 {
+  opacity: .1; }
+
+.op2 {
+  opacity: .2; }
+
+.op3 {
+  opacity: .3; }
+
+.op4 {
+  opacity: .4; }
+
+.op5 {
+  opacity: .5; }
+
+.op6 {
+  opacity: .6; }
+
+.op7 {
+  opacity: .7; }
+
+.op8 {
+  opacity: .8; }
+
+.op9 {
+  opacity: .9; }
+
+.op10 {
+  opacity: 0; }
+
+/* Contain floats: h5bp.com/q */
+.group:before, .group:after {
+  content: "";
+  display: table; }
+
+.group:after {
+  clear: both; }
+
+/* Hide only visually, but have it available for screenreaders: */
+/* Perhaps update based on this: https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe */
+/* Hide visually and from screenreaders, but maintain layout */
+/* for image replacement */
+/* Hide for both screenreaders and browsers */
+/* Zero out list styles */
+/* Stand for No Text */
+.nt {
+  display: block;
+  border: 0;
+  text-indent: -123456em;
+  overflow: hidden;
+  text-align: left;
+  direction: ltr;
+  *line-height: 0; }
+
+.nobr {
+  white-space: nowrap; }
+
+.hideSmall {
+  display: none; }
+  @media screen and (min-width: 640px) {
+    .hideSmall {
+      display: inherit; } }
+
+a, svg path {
+  transition: all 0.25s ease-in-out; }
+
+/* Custom CSS */
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: 0;
+  border-radius: 0;
+  outline: none; }
+
+/* Browser Targeting */
+/* Javascript Only! */
+
+/*# sourceMappingURL=screen.css.map */
