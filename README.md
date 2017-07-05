@@ -4,6 +4,8 @@ These (along with many of my other github starter files) are put here just for m
 
 I update these often and most likely what is here on github may be out of date or missing something.  Generally, I'll update these a bit with every project I work on.  Usually the updates have to do with my SASS files, but once in a while I'll change something with my grunt workflow.  Lately I have been changing my paths around a bit.
 
+It is assumed you are already running some sort of a webserver on your dev environment.  In my case, it's usually MAMP.
+
 These files are for a specific vanilla project.  
 
 Uses grunt for workflow and the following:
@@ -24,6 +26,19 @@ Livereload is on - snag the livereload chrome plugin for easy working:
 https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
 
 
+REQUIREMENTS:
+
+Node/NPM
+Grunt (Install global)
+
+Make sure you have the grunt cli installed globally:
+
+sudo npm install -g grunt-cli
+
+npm install and you are good to go  (you will prob need to use sudo)
+
+
+
 NOTES:
 
 ** I have been adjusting myproject paths lately, but it's not reflected in these files.  All of your "working" files are in the "a" directory - but these starters will automatically compile everything into the base directory.  I guess you could always make a source & public directory or do whatever you need. I find that I need to adjust these often based on what/whom I am working with. (If I'm building a wordpress theme, I will follow that structure, etc)
@@ -37,17 +52,9 @@ NOTES:
 ** autoprefixr defaults to "last two versions" but, if you need to adjust based on your requirements:
 https://github.com/ai/browserslist#queries
 
+** Things I should add to this include:
 
+- better automating of moving files
+- better checking of removing files from kit if I delete them
 
-
-REQUIREMENTS:
-
-Node/NPM
-Grunt (Install global)
-
-Make sure you have the grunt cli installed globally:
-
-sudo npm install -g grunt-cli
-
-npm install and you are good to go  (you will prob need to use sudo)
 
